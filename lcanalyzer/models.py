@@ -21,7 +21,9 @@ def load_dataset(filename):
 
 
 def mean_mag(data,mag_col):
-    """Calculate the mean magnitude of a lightcurve"""
+    """Calculate the mean magnitude of a lightcurve
+       periods
+    """
     return data[mag_col].mean()
 
 
