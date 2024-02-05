@@ -8,12 +8,10 @@ in a single or different bands.
 """
 
 import pandas as pd
-import numpy as np
-from astropy.timeseries import LombScargle
 
 def load_dataset(filename):
     """Load a table from CSV file.
-    
+
     :param filename: The name of the .csv file to load
     :returns: pd.DataFrame with the data from the file.
     """
@@ -36,7 +34,7 @@ def max_mag(data, mag_col):
     :param data: pd.DataFrame with observed magnitudes for a single source.
     :param mag_col: a string with the name of the column for calculating the max value.
     :returns: The max value of the column.
-    """    
+    """
     return data[mag_col].max()
 
 
