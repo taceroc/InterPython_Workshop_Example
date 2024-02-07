@@ -37,7 +37,14 @@ def max_mag(data, mag_col):
     """
     return data[mag_col].max()
 
-
+def std_mag(data, mag_col):
+    """
+    Calculate the mean magnitude of a lightcurve
+    :param data: pd.DataFrame with observed magnitudes for a single source.
+    :param mag_col: a string with the name of the column for calculating the mean.
+    :returns: A float with mean value of the column
+    """
+    return data[mag_col].std()
 def min_mag(data, mag_col):
     """Calculate the min magnitude of a lightcurve
     :param data: pd.DataFrame with observed magnitudes for a single source.
@@ -45,3 +52,5 @@ def min_mag(data, mag_col):
     :returns: The min value of the column.
     """
     return data[mag_col].min()
+
+
